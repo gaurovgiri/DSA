@@ -1,6 +1,6 @@
 // Queue Implementation using array
 
-// 2. Head fixed & Tail Vary
+// 1. Both head and tail pointer vary
 
 #include <iostream>
 
@@ -43,7 +43,7 @@ public:
 
     int dequeue()
     {
-        if (rear == -1)
+        if (front > rear)
         {
             cout << "Queue is Empty" << endl;
             return FAILED;
@@ -52,15 +52,10 @@ public:
         {
             item = queue[front];
             cout << "Dequeued: " << item << endl;
-
-            for (int i = 0; i < rear; i++)
-            {
-                queue[i] = queue[i + 1];
-            }
-
-            rear--;
+            front++;
             return SUCCESS;
         }
+        
     }
 
     void display()
@@ -96,19 +91,21 @@ int main()
 
         switch (choice)
         {
-        case 1:
-            q.enqueue();
-            break;
-        case 2:
-            q.dequeue();
-            break;
-        case 3:
-            q.display();
-            break;
-        case 4:
-            break;
-        default:
-            break;
+            case 1:
+                q.enqueue();
+                break;
+            case 2:
+                q.dequeue();
+                break;
+            case 3:
+                q.display();
+                break;
+            case 4:
+                break;
+            default:
+                break;
         }
-    } while (choice != 4);
+    }
+    while(choice != 4);
+    
 }
