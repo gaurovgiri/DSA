@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
@@ -72,7 +72,7 @@ int main()
             second_op = p.pop();
             first_op = p.pop();
             result = first_op * second_op;
-            p.push(result);
+            p.push(result);     
             break;
 
         default:
