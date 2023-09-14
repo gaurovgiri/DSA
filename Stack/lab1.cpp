@@ -1,4 +1,4 @@
-// Write a program to implement Stack using top varying method using stack.
+// Write a program to implement Stack using top varying method.
 
 #include <iostream>
 #include <stdlib.h>

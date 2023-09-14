@@ -1,3 +1,5 @@
+// Write a program to implement Stack using bottom varying method.
+
 #include <ncurses.h>
 #include <iostream>
 
